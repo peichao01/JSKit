@@ -46,7 +46,7 @@ define([], function() {
     * @param {String}   [name]    -- ClassName
     * @param {Object}   [statics] -- static member of Class
     */
-    return window.inherit = function inherit(options) {
+    return function inherit(options) {
         var base = options.base || emptyBase,
             proto = options.proto || {},
             result = (proto[constructorName] || (options.base && base.prototype[constructorName]))
