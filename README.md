@@ -22,7 +22,10 @@ Example
 ```javascript
 // base "class"
 var A = inherit({
-    name: 'A', // set the name,will generate a better constructor with name
+    // set the name,will generate a better constructor with name.
+    // this will be friendly for debug when you see the 
+    // instance's constructor is a named Class instead of an anonymous Function
+    name: 'A', 
     /** @lends A.prototype */
     proto: {
         __constructor : function(property) { // constructor
